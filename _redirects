@@ -1,1 +1,4 @@
-https://freelovecalculator.online/*  https://www.freelovecalculator.online/:splat  301!
+# Redirect all to https://www.freelovecalculator.online
+http://freelovecalculator.online/*    https://www.freelovecalculator.online/:s    301!
+https://freelovecalculator.online/*   https://www.freelovecalculator.online/:s    301!
+http://www.freelovecalculator.online/* https://www.freelovecalculator.online/:s   301!
