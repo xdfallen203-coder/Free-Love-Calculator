@@ -8,5 +8,4 @@ Disallow:
 Disallow: /cgi-bin/
 Disallow: /admin
 User-agent: *
-Disallow: /?m=1
 Sitemap: https://www.freelovecalculator.online/sitemap.xml
