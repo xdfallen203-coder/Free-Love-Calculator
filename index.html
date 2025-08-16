@@ -232,6 +232,374 @@
   <p>We rotate suggestions like a coffee walk, board games night, picnic in the park, stargazing, or cooking together at home.</p>
 </section>
 
+    <!-- ================== Love Quiz ================== -->
+<section id="love-quiz">
+  <h2>Are You a Perfect Match? 💖</h2>
+  <p>
+    Welcome to our fun and free <strong>love quiz online</strong>! 
+    This short <em>relationship quiz for couples</em> helps you discover how strong 
+    your connection really is. Whether you call it a <strong>soulmate test</strong>, 
+    <em>love test for couples</em>, or simply a playful way to check your bond, 
+    this quiz is designed to bring smiles while giving you insights into your 
+    <em>relationship compatibility</em>.
+  </p>
+
+  <form id="quizForm">
+    <div>
+      <p>1. Do you and your partner share similar hobbies?</p>
+      <label><input type="radio" name="q1" value="2"> Yes</label>
+      <label><input type="radio" name="q1" value="1"> Sometimes</label>
+      <label><input type="radio" name="q1" value="0"> No</label>
+    </div>
+
+    <div>
+      <p>2. How often do you laugh together?</p>
+      <label><input type="radio" name="q2" value="2"> Every day</label>
+      <label><input type="radio" name="q2" value="1"> Sometimes</label>
+      <label><input type="radio" name="q2" value="0"> Rarely</label>
+    </div>
+
+    <div>
+      <p>3. Do you support each other's dreams?</p>
+      <label><input type="radio" name="q3" value="2"> Always</label>
+      <label><input type="radio" name="q3" value="1"> Sometimes</label>
+      <label><input type="radio" name="q3" value="0"> Not really</label>
+    </div>
+
+    <div>
+      <p>4. How do you handle disagreements?</p>
+      <label><input type="radio" name="q4" value="2"> Talk calmly</label>
+      <label><input type="radio" name="q4" value="1"> Sometimes argue</label>
+      <label><input type="radio" name="q4" value="0"> Big fights</label>
+    </div>
+
+    <div>
+      <p>5. Do you feel happy and comfortable together?</p>
+      <label><input type="radio" name="q5" value="2"> Yes, always</label>
+      <label><input type="radio" name="q5" value="1"> Mostly</label>
+      <label><input type="radio" name="q5" value="0"> Not really</label>
+    </div>
+
+    <button type="button" onclick="calculateQuiz()">Get My Result</button>
+  </form>
+
+  <div id="quizResult" style="margin-top:20px; font-weight:bold;"></div>
+
+  <p>
+    This <strong>online love compatibility quiz</strong> is just for fun, 
+    but many couples use it as a playful way to check their bond. 
+    Alongside our <em>love calculator by name</em> and 
+    <em>birthday love compatibility test</em>, this quiz adds another 
+    exciting layer to your <strong>relationship compatibility journey</strong>.
+  </p>
+</section>
+
+<!-- ================== Share Buttons ================== -->
+<section id="share-result">
+  <h2>Share Your Result 💌</h2>
+  <p>
+    Did you enjoy your <strong>love quiz result</strong>? 
+    Share it with friends, your crush, or your partner! 
+    Spreading the word not only makes it fun, but also helps others discover 
+    our <em>online love calculator</em> and <strong>relationship quizzes</strong>.
+  </p>
+  <a id="shareWhatsApp" href="#" target="_blank">📱 Share on WhatsApp</a> |
+  <a id="shareTwitter" href="#" target="_blank">🐦 Share on Twitter</a> |
+  <a id="shareFacebook" href="#" target="_blank">📘 Share on Facebook</a>
+</section>
+
+<script>
+function calculateQuiz() {
+  let score = 0;
+  for (let i = 1; i <= 5; i++) {
+    let q = document.querySelector('input[name="q'+i+'"]:checked');
+    if (q) score += parseInt(q.value);
+  }
+
+  let resultText = "";
+  if (score >= 9) {
+    resultText = "❤️ Soulmates! Your love is almost unbreakable.";
+  } else if (score >= 6) {
+    resultText = "💞 Great Match! Your bond is strong with room to grow.";
+  } else if (score >= 3) {
+    resultText = "💌 Sweet Connection! You have fun but can improve communication.";
+  } else {
+    resultText = "💔 Oops! Maybe it's just friendship for now.";
+  }
+
+  document.getElementById("quizResult").innerText = resultText;
+
+  // Update share links with result
+  const encoded = encodeURIComponent(resultText + " - Try the quiz here: https://yourdomain.com/");
+  document.getElementById("shareWhatsApp").href = "https://api.whatsapp.com/send?text=" + encoded;
+  document.getElementById("shareTwitter").href = "https://twitter.com/intent/tweet?text=" + encoded;
+  document.getElementById("shareFacebook").href = "https://www.facebook.com/sharer/sharer.php?u=https://yourdomain.com/&quote=" + encoded;
+}
+</script>
+<!-- ================== Love Compatibility by Name ================== -->
+<section id="name-compatibility">
+  <h2>Love Compatibility by Name</h2>
+  <p>
+    One of the most popular ways people use a <strong>love calculator</strong> is 
+    through names. Our <strong>love calculator by name</strong> shows how letters, 
+    initials, and names align in a fun <strong>love match</strong> test. 
+    Whether you want a quick <em>name love match</em> with your crush, 
+    or to see if your partner's name creates a high <em>love percentage</em>, 
+    this feature makes it simple and entertaining. 
+  </p>
+  <p>
+    Many users search for <em>love calculator by initials</em>, 
+    <em>name compatibility test</em>, or 
+    <em>couple name match</em>. This section combines all of these 
+    into one easy tool to explore your relationship compatibility by name. 
+  </p>
+</section>
+
+<!-- ================== Love Compatibility by Birthday & Zodiac ================== -->
+<section id="birthday-zodiac-compatibility">
+  <h2>Love Compatibility by Birthday & Zodiac</h2>
+  <p>
+    Your <strong>birthday love calculator</strong> result can reveal fun insights 
+    about how your date of birth affects your love life. 
+    Many people enjoy testing <em>love compatibility by birthday</em> 
+    because it adds a playful numerology-style angle to the relationship. 
+  </p>
+  <p>
+    Another popular method is checking <strong>zodiac love compatibility</strong>. 
+    From Aries' fiery passion to Pisces' deep emotions, 
+    <em>zodiac love match tests</em> highlight how different star signs 
+    may interact in romance. 
+    Whether you're curious about <em>astrological compatibility</em>, 
+    <em>horoscope love match</em>, or just a fun <em>zodiac sign compatibility test</em>, 
+    this feature adds another layer to your <strong>relationship compatibility calculator</strong>.
+  </p>
+</section>
+
+<!-- ================== Cute Date Ideas ================== -->
+<section id="date-ideas">
+  <h2>Top 10 Romantic Date Ideas</h2>
+  <p>
+    After checking your <strong>love compatibility score</strong>, 
+    why not plan something special? Here are ten 
+    <strong>romantic date ideas</strong> and 
+    <em>fun couple activities</em> to help you and your partner connect:
+  </p>
+  <ul>
+    <li>Take a coffee walk together</li>
+    <li>Stargaze on a clear night</li>
+    <li>Play your favorite board games</li>
+    <li>Cook a new recipe as a couple</li>
+    <li>Watch the sunset from a scenic spot</li>
+    <li>Try a restaurant you've never visited</li>
+    <li>Sign up for a dance class</li>
+    <li>Go on a weekend road trip</li>
+    <li>Volunteer together for a local cause</li>
+    <li>Create a couples' bucket list of adventures</li>
+  </ul>
+  <p>
+    These <em>cute date ideas for couples</em> turn your 
+    <strong>love percentage calculator</strong> result 
+    into real-life memories that strengthen your bond. 
+  </p>
+</section>
+
+<!-- ================== Mini Blog / Tips ================== -->
+<section id="love-tips">
+  <h2>Love Tips & Relationship Compatibility Insights</h2>
+  
+  <article>
+    <h3>How to Know If Someone Likes You (Beyond the Calculator)</h3>
+    <p>
+      While a <strong>crush calculator</strong> is a fun way to test feelings, 
+      real attraction often shows through body language, eye contact, 
+      and consistency. These signs go beyond a 
+      <em>love compatibility calculator</em> score and point to genuine interest.
+    </p>
+  </article>
+  
+  <article>
+    <h3>Science vs Fun: Do Names Affect Compatibility?</h3>
+    <p>
+      Some people believe names carry special energy, and a 
+      <em>name compatibility test</em> is a fun way to explore this idea. 
+      While science may not back it up, our 
+      <strong>love calculator by name</strong> is designed for playful 
+      <em>relationship compatibility</em> checks that bring joy and laughter. 
+    </p>
+  </article>
+  
+  <article>
+    <h3>Top Signs You've Found Your Perfect Match</h3>
+    <p>
+      Whether your <em>zodiac love compatibility test</em> shows high results 
+      or your <em>love percentage calculator</em> gives a playful score, 
+      real compatibility is about laughter, trust, and support. 
+      These are the true signs of a strong <strong>relationship match</strong> 
+      beyond what any calculator can measure.
+    </p>
+  </article>
+</section>
+
+<!-- ================== User Engagement ================== -->
+<section id="engagement">
+  <h2>Share & Engage With Your Result</h2>
+  <p>
+    Did you like your <strong>love compatibility test</strong> result? 
+    Share it with friends or compare with your partner. 
+    Your feedback helps make our <em>online love calculator</em> even better.
+  </p>
+  <button onclick="alert('Thanks for your feedback!')">Yes ❤️</button>
+  <button onclick="alert('Thanks for your feedback!')">No 💔</button>
+  
+  <!-- ================== Related Searches ================== -->
+<section id="related-searches">
+  <h2>Related Love Searches ❤️</h2>
+  <p>
+    Many visitors who enjoy our <strong>love calculator</strong> and 
+    <em>relationship compatibility tools</em> also look for these fun topics:
+  </p>
+  <ul>
+    <li><a href="#name-compatibility">Love calculator by name</a></li>
+    <li><a href="#birthday-zodiac-compatibility">Birthday love compatibility test</a></li>
+    <li><a href="#birthday-zodiac-compatibility">Zodiac love compatibility calculator</a></li>
+    <li><a href="#date-ideas">Romantic date ideas for couples</a></li>
+    <li><a href="#love-quiz">Soulmate test online</a></li>
+    <li><a href="#love-tips">Signs you've found your perfect match</a></li>
+    <li><a href="#love-quiz">Love quiz for couples</a></li>
+    <li><a href="#engagement">Fun poll: what's your zodiac sign?</a></li>
+  </ul>
+  <p>
+    These <strong>related love compatibility searches</strong> help couples 
+    discover more ways to test, enjoy, and strengthen their relationships. 
+    Whether it's a <em>crush calculator</em>, 
+    a <em>name love match tool</em>, or simply 
+    <em>romantic tips for couples</em>, you'll find everything here in one place. 
+  </p>
+</section>
+  
+<footer class="footer">
+  <p><strong>Author:</strong> Free Love Calculator • <time datetime="2025-08-14">Updated Aug 14, 2025</time> • <a href="#privacy">Privacy</a> • <a href="#disclaimer">Disclaimer</a></p>
+  <p id="privacy"><strong>Privacy:</strong> 100% client‑side. No tracking cookies by default. Add your own analytics only if needed.</p>
+  <p id="disclaimer"><strong>Disclaimer:</strong> For fun only--don't make serious life decisions based on a percentage!</p>
+</footer>
+
+
+  </div>  <script>
+    // --- Utility helpers ---
+    const byId = id => document.getElementById(id);
+    const pick = arr => arr[Math.floor(Math.random()*arr.length)];
+
+    // Name hash (deterministic)
+    function nameHash(s){
+      s = (s||'').toLowerCase().replace(/[^a-z]/g,'');
+      let h=7; for(let i=0;i<s.length;i++){ h = (h*31 + s.charCodeAt(i)) >>> 0; }
+      return h;
+    }
+
+    // Life path number (DOB -> numerology-ish 1..9)
+    function lifePath(d){
+      if(!d) return 0;
+      const digits = d.replace(/\D/g,'');
+      const sum = digits.split('').reduce((a,b)=>a+Number(b),0);
+      let n = sum; while(n>9){ n = String(n).split('').reduce((a,b)=>a+Number(b),0); }
+      return n || 0;
+    }
+
+    // Zodiac compatibility (very light, playful)
+    const friendlyPairs = new Set([
+      'Aries:Leo','Aries:Sagittarius','Taurus:Virgo','Taurus:Capricorn','Gemini:Libra','Gemini:Aquarius',
+      'Cancer:Scorpio','Cancer:Pisces','Leo:Aries','Leo:Sagittarius','Virgo:Taurus','Virgo:Capricorn',
+      'Libra:Gemini','Libra:Aquarius','Scorpio:Cancer','Scorpio:Pisces','Sagittarius:Aries','Sagittarius:Leo',
+      'Capricorn:Taurus','Capricorn:Virgo','Aquarius:Gemini','Aquarius:Libra','Pisces:Cancer','Pisces:Scorpio'
+    ]);
+
+    function zodiacBoost(z1, z2){
+      if(!z1 || !z2) return 0;
+      const key = `${z1}:${z2}`;
+      return friendlyPairs.has(key) ? 6 : -2; // tiny nudge
+    }
+
+    function computeScore({name1,name2,dob1,dob2,z1,z2}){
+      const base = (nameHash(name1) ^ nameHash(name2)) % 101; // 0..100
+      const lp1 = lifePath(dob1), lp2 = lifePath(dob2);
+      const lpDiff = Math.abs(lp1-lp2);
+      const lpAdj = (lp1 && lp2) ? (lpDiff<=1 ? 7 : lpDiff>=6 ? -5 : 0) : 0;
+      const zAdj = zodiacBoost(z1,z2);
+      let score = Math.max(0, Math.min(100, Math.round(base*0.85 + 10 + lpAdj + zAdj)));
+      return score;
+    }
+
+    function msgFor(score){
+      if(score>=90) return "Twin-flame vibes! Plan a mini‑adventure together.";
+      if(score>=75) return "Strong match--keep the laughter flowing and try a new cafe.";
+      if(score>=60) return "Great potential--talk feelings and do a cute activity.";
+      if(score>=40) return "Mixed signals--more honest chats, fewer assumptions.";
+      if(score>=20) return "Slow burn--start with small gestures, build trust.";
+      return "Opposites attract? Be kind, be you--see where it goes.";
+    }
+
+    const TIPS = [
+      "Drop a sweet good‑morning text ☀️",
+      "Send a throwback song that reminds you of them 🎵",
+      "Share a funny reel or meme 😂",
+      "Write a tiny note and hide it in their bag 💌",
+      "Cook together and rate each other's dish 🍝"
+    ];
+    const IDEAS = [
+      "Evening chai + sunset walk",
+      "Street food trail + selfies",
+      "Board‑games night at home",
+      "DIY ice‑cream sundaes",
+      "Stargazing on the terrace"
+    ];
+
+    byId('love-form').addEventListener('submit', e => {
+      e.preventDefault();
+      const name1 = byId('name1').value.trim();
+      const name2 = byId('name2').value.trim();
+      if(!name1 || !name2) return;
+      const dob1 = byId('dob1').value;
+      const dob2 = byId('dob2').value;
+      const z1 = byId('z1').value; const z2 = byId('z2').value;
+      const score = computeScore({name1,name2,dob1,dob2,z1,z2});
+
+      byId('pct').textContent = score + '%';
+      byId('bar').style.width = score + '%';
+      byId('message').textContent = msgFor(score);
+      byId('tip').textContent = pick(TIPS);
+      byId('idea').textContent = pick(IDEAS);
+      byId('result').style.display = 'block';
+
+      // Update hash for shareability (no PII, just hashed names)
+      const shareHash = btoa(unescape(encodeURIComponent(name1+'|'+name2))).replace(/=+$/,'');
+      history.replaceState(null, '', '#'+shareHash);
+    });
+
+    // Share button
+    byId('share').addEventListener('click', async () => {
+      const pct = byId('pct').textContent;
+      const msg = `Our Love Calculator says we're ${pct} compatible! 💖 Try it: ` + location.href.split('#')[0];
+      if(navigator.share){
+        try{ await navigator.share({title:'Love Calculator', text: msg, url: location.href.split('#')[0]}); }catch{ /* ignore */ }
+      } else {
+        await navigator.clipboard.writeText(msg);
+        alert('Copied! Paste anywhere.');
+      }
+    });
+
+    // Deep‑link: if hash present, prefill names (decoding best‑effort)
+    window.addEventListener('DOMContentLoaded', () => {
+      const h = location.hash.slice(1);
+      try{
+        if(h){
+          const [a,b] = decodeURIComponent(escape(atob(h))).split('|');
+          if(a && b){ byId('name1').value=a; byId('name2').value=b; }
+        }
+      }catch{}
+    });
+  </script></body>
+</html>
+
 <footer class="footer">
   <p><strong>Author:</strong> Free Love Calculator • <time datetime="2025-08-14">Updated Aug 14, 2025</time> • <a href="#privacy">Privacy</a> • <a href="#disclaimer">Disclaimer</a></p>
   <p id="privacy"><strong>Privacy:</strong> 100% client‑side. No tracking cookies by default. Add your own analytics only if needed.</p>
