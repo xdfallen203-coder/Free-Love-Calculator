@@ -1,4 +1,4 @@
-<meta name='viewport' content='width=device-width, initial-scale=1'/><!DOCTYPE html><html lang="en">
+y<meta name='viewport' content='width=device-width, initial-scale=1'/><!DOCTYPE html><html lang="en">
 <head>
   <link rel="icon" href="/favicon.png" type="image/png">
   <meta charset="utf-8" />
@@ -569,36 +569,6 @@ function calculateQuiz() {
       byId('tip').textContent = pick(TIPS);
       byId('idea').textContent = pick(IDEAS);
       byId('result').style.display = 'block';
-
-      // Update hash for shareability (no PII, just hashed names)
-      const shareHash = btoa(unescape(encodeURIComponent(name1+'|'+name2))).replace(/=+$/,'');
-      history.replaceState(null, '', '#'+shareHash);
-    });
-
-    // Share button
-    byId('share').addEventListener('click', async () => {
-      const pct = byId('pct').textContent;
-      const msg = `Our Love Calculator says we're ${pct} compatible! 💖 Try it: ` + location.href.split('#')[0];
-      if(navigator.share){
-        try{ await navigator.share({title:'Love Calculator', text: msg, url: location.href.split('#')[0]}); }catch{ /* ignore */ }
-      } else {
-        await navigator.clipboard.writeText(msg);
-        alert('Copied! Paste anywhere.');
-      }
-    });
-
-    // Deep‑link: if hash present, prefill names (decoding best‑effort)
-    window.addEventListener('DOMContentLoaded', () => {
-      const h = location.hash.slice(1);
-      try{
-        if(h){
-          const [a,b] = decodeURIComponent(escape(atob(h))).split('|');
-          if(a && b){ byId('name1').value=a; byId('name2').value=b; }
-        }
-      }catch{}
-    });
-  </script></body>
-</html>
 
 <footer class="footer">
   <p><strong>Author:</strong> Free Love Calculator • <time datetime="2025-08-14">Updated Aug 14, 2025</time> • <a href="#privacy">Privacy</a> • <a href="#disclaimer">Disclaimer</a></p>
