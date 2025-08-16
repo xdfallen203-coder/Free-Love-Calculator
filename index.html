@@ -1,4 +1,4 @@
-y<meta name='viewport' content='width=device-width, initial-scale=1'/><!DOCTYPE html><html lang="en">
+<meta name='viewport' content='width=device-width, initial-scale=1'/><!DOCTYPE html><html lang="en">
 <head>
   <link rel="icon" href="/favicon.png" type="image/png">
   <meta charset="utf-8" />
@@ -231,8 +231,7 @@ y<meta name='viewport' content='width=device-width, initial-scale=1'/><!DOCTYPE 
   <h3>What are some cute date ideas?</h3>
   <p>We rotate suggestions like a coffee walk, board games night, picnic in the park, stargazing, or cooking together at home.</p>
 </section>
-
-    <!-- ================== Love Quiz ================== -->
+<!-- ================== Love Quiz ================== -->
 <section id="love-quiz">
   <h2>Are You a Perfect Match? 💖</h2>
   <p>
@@ -483,98 +482,6 @@ function calculateQuiz() {
   <p id="disclaimer"><strong>Disclaimer:</strong> For fun only--don't make serious life decisions based on a percentage!</p>
 </footer>
 
-
-  </div>  <script>
-    // --- Utility helpers ---
-    const byId = id => document.getElementById(id);
-    const pick = arr => arr[Math.floor(Math.random()*arr.length)];
-
-    // Name hash (deterministic)
-    function nameHash(s){
-      s = (s||'').toLowerCase().replace(/[^a-z]/g,'');
-      let h=7; for(let i=0;i<s.length;i++){ h = (h*31 + s.charCodeAt(i)) >>> 0; }
-      return h;
-    }
-
-    // Life path number (DOB -> numerology-ish 1..9)
-    function lifePath(d){
-      if(!d) return 0;
-      const digits = d.replace(/\D/g,'');
-      const sum = digits.split('').reduce((a,b)=>a+Number(b),0);
-      let n = sum; while(n>9){ n = String(n).split('').reduce((a,b)=>a+Number(b),0); }
-      return n || 0;
-    }
-
-    // Zodiac compatibility (very light, playful)
-    const friendlyPairs = new Set([
-      'Aries:Leo','Aries:Sagittarius','Taurus:Virgo','Taurus:Capricorn','Gemini:Libra','Gemini:Aquarius',
-      'Cancer:Scorpio','Cancer:Pisces','Leo:Aries','Leo:Sagittarius','Virgo:Taurus','Virgo:Capricorn',
-      'Libra:Gemini','Libra:Aquarius','Scorpio:Cancer','Scorpio:Pisces','Sagittarius:Aries','Sagittarius:Leo',
-      'Capricorn:Taurus','Capricorn:Virgo','Aquarius:Gemini','Aquarius:Libra','Pisces:Cancer','Pisces:Scorpio'
-    ]);
-
-    function zodiacBoost(z1, z2){
-      if(!z1 || !z2) return 0;
-      const key = `${z1}:${z2}`;
-      return friendlyPairs.has(key) ? 6 : -2; // tiny nudge
-    }
-
-    function computeScore({name1,name2,dob1,dob2,z1,z2}){
-      const base = (nameHash(name1) ^ nameHash(name2)) % 101; // 0..100
-      const lp1 = lifePath(dob1), lp2 = lifePath(dob2);
-      const lpDiff = Math.abs(lp1-lp2);
-      const lpAdj = (lp1 && lp2) ? (lpDiff<=1 ? 7 : lpDiff>=6 ? -5 : 0) : 0;
-      const zAdj = zodiacBoost(z1,z2);
-      let score = Math.max(0, Math.min(100, Math.round(base*0.85 + 10 + lpAdj + zAdj)));
-      return score;
-    }
-
-    function msgFor(score){
-      if(score>=90) return "Twin-flame vibes! Plan a mini‑adventure together.";
-      if(score>=75) return "Strong match--keep the laughter flowing and try a new cafe.";
-      if(score>=60) return "Great potential--talk feelings and do a cute activity.";
-      if(score>=40) return "Mixed signals--more honest chats, fewer assumptions.";
-      if(score>=20) return "Slow burn--start with small gestures, build trust.";
-      return "Opposites attract? Be kind, be you--see where it goes.";
-    }
-
-    const TIPS = [
-      "Drop a sweet good‑morning text ☀️",
-      "Send a throwback song that reminds you of them 🎵",
-      "Share a funny reel or meme 😂",
-      "Write a tiny note and hide it in their bag 💌",
-      "Cook together and rate each other's dish 🍝"
-    ];
-    const IDEAS = [
-      "Evening chai + sunset walk",
-      "Street food trail + selfies",
-      "Board‑games night at home",
-      "DIY ice‑cream sundaes",
-      "Stargazing on the terrace"
-    ];
-
-    byId('love-form').addEventListener('submit', e => {
-      e.preventDefault();
-      const name1 = byId('name1').value.trim();
-      const name2 = byId('name2').value.trim();
-      if(!name1 || !name2) return;
-      const dob1 = byId('dob1').value;
-      const dob2 = byId('dob2').value;
-      const z1 = byId('z1').value; const z2 = byId('z2').value;
-      const score = computeScore({name1,name2,dob1,dob2,z1,z2});
-
-      byId('pct').textContent = score + '%';
-      byId('bar').style.width = score + '%';
-      byId('message').textContent = msgFor(score);
-      byId('tip').textContent = pick(TIPS);
-      byId('idea').textContent = pick(IDEAS);
-      byId('result').style.display = 'block';
-
-<footer class="footer">
-  <p><strong>Author:</strong> Free Love Calculator • <time datetime="2025-08-14">Updated Aug 14, 2025</time> • <a href="#privacy">Privacy</a> • <a href="#disclaimer">Disclaimer</a></p>
-  <p id="privacy"><strong>Privacy:</strong> 100% client‑side. No tracking cookies by default. Add your own analytics only if needed.</p>
-  <p id="disclaimer"><strong>Disclaimer:</strong> For fun only--don't make serious life decisions based on a percentage!</p>
-</footer>
 
   </div>  <script>
     // --- Utility helpers ---
